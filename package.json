@@ -15,6 +15,7 @@
     "deploy": "gh-pages -d build",
     "sass": "node-sass --recursive -w ./src/scss -o ./src/css"
   },
+  "homepage": "https://mark-ulrich.github.io/fcc-pomodoro-clock",
   "eslintConfig": {
     "extends": "react-app"
   },
