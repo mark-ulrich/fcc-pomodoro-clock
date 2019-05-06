@@ -20,7 +20,7 @@ export class Timer extends Component {
     const timerLabel = this.props.isOnBreak ? 'Break' : 'Session';
     const timeRemaining = this.props.timeRemaining;
     return (
-      <div>
+      <div id='timer-container'>
         <div id='timer-label'>
           <h3>{timerLabel}</h3>
         </div>
