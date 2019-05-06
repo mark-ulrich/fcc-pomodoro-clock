@@ -6,14 +6,24 @@ export class SessionTimeControl extends Component {
     const { increment, decrement } = this.props.controlMethods;
 
     return (
-      <div>
+      <div className='length-control-container' id='session-controls'>
         <h3 id='session-label'>Session Length</h3>
-        <div id='session-length'>{this.props.sessionLength}</div>
-        <div id='session-increment' onClick={increment}>
-          <i className='fa fa-arrow-up' />
-        </div>
-        <div id='session-decrement' onClick={decrement}>
+        <div
+          className='control arrow-control'
+          id='session-decrement'
+          onClick={decrement}
+        >
           <i className='fa fa-arrow-down' />
+        </div>
+        <div className='control' id='session-length'>
+          {this.props.sessionLength}
+        </div>
+        <div
+          className='control arrow-control'
+          id='session-increment'
+          onClick={increment}
+        >
+          <i className='fa fa-arrow-up' />
         </div>
       </div>
     );

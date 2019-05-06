@@ -139,16 +139,21 @@ export class PomodoroClockApp extends Component {
   render() {
     const timeRemaining = this.state.timeRemaining;
     return (
-      <div>
-        <BreakTimeControl
-          breakLength={this.state.breakLength}
-          controlMethods={this.breakMethods}
-        />
-        <SessionTimeControl
-          sessionLength={this.state.sessionLength}
-          controlMethods={this.sessionMethods}
-        />
+      <div id='app-container'>
+        <div id='app-header'>
+          <h1>Pomodoro Clock</h1>
+        </div>
         <Timer timeRemaining={timeRemaining} isOnBreak={this.state.isOnBreak} />
+        <div id='length-controls'>
+          <BreakTimeControl
+            breakLength={this.state.breakLength}
+            controlMethods={this.breakMethods}
+          />
+          <SessionTimeControl
+            sessionLength={this.state.sessionLength}
+            controlMethods={this.sessionMethods}
+          />
+        </div>
         <TimerControl
           isPaused={this.state.isPaused}
           controlMethods={this.timerControlMethods}

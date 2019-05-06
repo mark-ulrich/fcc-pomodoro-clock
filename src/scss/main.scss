@@ -1,0 +1,149 @@
+@import 'colors';
+
+// $body-bgcolor: $color-secondary-2-1;
+$body-bgcolor: $color-primary-3;
+$app-bgcolor: $color-primary-2;
+$app-header-color: $color-white;
+$text-color: $color-white;
+$btn-bgcolor: $color-primary-3;
+$btn-textcolor: $color-white;
+$btn-bgcolor-hover: $color-secondary-1-2;
+$btn-textcolor-hover: $color-black;
+
+* {
+  // border: 1px solid red;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $body-bgcolor;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#app-container {
+  // border: 1px solid red;
+  border-radius: 5%;
+  border: 2px solid $color-black;
+
+  box-shadow: 2px 2px 2px 2px darken($app-bgcolor, 14);
+
+  margin: 0 auto;
+  padding: 1rem;
+
+  max-width: 600px;
+
+  background: $app-bgcolor;
+  color: $text-color;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+  h3 {
+    text-align: center;
+  }
+
+  #app-header {
+    margin: 0 auto 1rem;
+
+    color: $app-header-color;
+
+    h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 2px $color-black;
+    }
+  }
+
+  #timer-container {
+    flex-basis: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    vertical-align: middle;
+    text-align: center;
+
+    * {
+      padding: 0.35rem 0;
+    }
+
+    #timer-label {
+      h3 {
+        font-size: 3.3rem;
+      }
+    }
+
+    #time-left {
+      font-size: 4rem;
+    }
+  }
+
+  #timer-controls {
+    margin: 1.4rem auto 0.5rem;
+    text-align: center;
+
+    .timer-control-button {
+      margin: 0 2rem;
+      padding: 0.6rem 1rem;
+
+      width: 200px;
+
+      border: 1px solid $color-black;
+      border-radius: 10px;
+
+      background: $btn-bgcolor;
+      color: $btn-textcolor;
+
+      font-size: 2rem;
+
+      cursor: pointer;
+
+      .btn-icon {
+        margin: 0 0 0 1rem;
+      }
+
+      &:hover {
+        transition: all 0.2s ease-in-out;
+        background: $btn-bgcolor-hover;
+        color: $btn-textcolor-hover;
+      }
+    }
+  }
+
+  #length-controls {
+    flex-basis: 50%;
+
+    .length-control-container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+
+      .control {
+        width: 70px;
+        text-align: center;
+        font-size: 2rem;
+      }
+
+      .arrow-control {
+        cursor: pointer;
+      }
+
+      h3 {
+        flex-basis: 100%;
+        font-size: 1.8rem;
+      }
+
+      div {
+        padding: 1rem;
+      }
+    }
+
+    #break-controls {
+    }
+
+    #session-controls {
+    }
+  }
+}

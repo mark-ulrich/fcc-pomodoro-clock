@@ -1,3 +1,78 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background: #142736;
+  font-family: 'Ubuntu', sans-serif; }
+
+#app-container {
+  border-radius: 5%;
+  border: 2px solid #222;
+  box-shadow: 2px 2px 2px 2px #0b1f2e;
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 600px;
+  background: #184568;
+  color: #c8c8c8;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; }
+  #app-container h3 {
+    text-align: center; }
+  #app-container #app-header {
+    margin: 0 auto 1rem;
+    color: #c8c8c8; }
+    #app-container #app-header h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 2px #222; }
+  #app-container #timer-container {
+    flex-basis: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    vertical-align: middle;
+    text-align: center; }
+    #app-container #timer-container * {
+      padding: 0.35rem 0; }
+    #app-container #timer-container #timer-label h3 {
+      font-size: 3.3rem; }
+    #app-container #timer-container #time-left {
+      font-size: 4rem; }
+  #app-container #timer-controls {
+    margin: 1.4rem auto 0.5rem;
+    text-align: center; }
+    #app-container #timer-controls .timer-control-button {
+      margin: 0 2rem;
+      padding: 0.6rem 1rem;
+      width: 200px;
+      border: 1px solid #222;
+      border-radius: 10px;
+      background: #142736;
+      color: #c8c8c8;
+      font-size: 2rem;
+      cursor: pointer; }
+      #app-container #timer-controls .timer-control-button .btn-icon {
+        margin: 0 0 0 1rem; }
+      #app-container #timer-controls .timer-control-button:hover {
+        transition: all 0.2s ease-in-out;
+        background: #146c4d;
+        color: #222; }
+  #app-container #length-controls {
+    flex-basis: 50%; }
+    #app-container #length-controls .length-control-container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center; }
+      #app-container #length-controls .length-control-container .control {
+        width: 70px;
+        text-align: center;
+        font-size: 2rem; }
+      #app-container #length-controls .length-control-container .arrow-control {
+        cursor: pointer; }
+      #app-container #length-controls .length-control-container h3 {
+        flex-basis: 100%;
+        font-size: 1.8rem; }
+      #app-container #length-controls .length-control-container div {
+        padding: 1rem; }
