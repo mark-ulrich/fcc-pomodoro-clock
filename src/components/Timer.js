@@ -8,25 +8,32 @@ export class Timer extends Component {
   convertTimeFormat = time => {
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
-
-    return `${minutes}:${seconds}`;
+    const minutesStr = minutes < 10 ? `0${minutes}` : `${minutes}`;
+    const secondsStr = seconds < 10 ? `0${seconds}` : `${seconds}`;
+    return `${minutesStr}:${secondsStr}`;
   };
 
+  /**
+   * Render the component
+   */
   render() {
+    const timerLabel = this.props.isOnBreak ? 'Break' : 'Session';
     const timeRemaining = this.props.timeRemaining;
     return (
       <div>
         <div id='timer-label'>
-          <h3>Session</h3>
+          <h3>{timerLabel}</h3>
         </div>
         <div id='time-left'>{this.convertTimeFormat(timeRemaining)}</div>
+        <audio id='beep' preload='auto' src='./audio/BeepSound.wav' />
       </div>
     );
   }
 }
 
 Timer.propTypes = {
-  timeRemaining: PropTypes.number.isRequired
+  timeRemaining: PropTypes.number.isRequired,
+  isOnBreak: PropTypes.bool.isRequired
 };
 
 export default Timer;
