@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export class Timer extends Component {
+  componentDidUpdate() {
+    // Change timer color when below threshold
+    const timeLeft = document.querySelector('#time-left');
+    if (this.props.timeRemaining < this.props.warningThreshold * 60) {
+      timeLeft.classList.add('warning');
+    } else if (timeLeft.classList.contains('warning')) {
+      timeLeft.classList.remove('warning');
+    }
+  }
+
   /**
    * Convert a time value from seconds to MM:SS format
    */
@@ -19,6 +29,7 @@ export class Timer extends Component {
   render() {
     const timerLabel = this.props.isOnBreak ? 'Break' : 'Session';
     const timeRemaining = this.props.timeRemaining;
+
     return (
       <div id='timer-container'>
         <div id='timer-label'>
@@ -33,7 +44,8 @@ export class Timer extends Component {
 
 Timer.propTypes = {
   timeRemaining: PropTypes.number.isRequired,
-  isOnBreak: PropTypes.bool.isRequired
+  isOnBreak: PropTypes.bool.isRequired,
+  warningThreshold: PropTypes.number
 };
 
 export default Timer;

@@ -79,6 +79,10 @@ body {
 
     #time-left {
       font-size: 4rem;
+
+      &.warning {
+        color: #df3a4f;
+      }
     }
   }
 
