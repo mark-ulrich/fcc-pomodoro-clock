@@ -5,7 +5,8 @@
 
 body {
   background: #142736;
-  font-family: 'Ubuntu', sans-serif; }
+  font-family: 'Ubuntu', sans-serif;
+  text-shadow: 2px 2px 2px #222; }
 
 #app-container {
   border-radius: 5%;
@@ -26,6 +27,7 @@ body {
     color: #c8c8c8; }
     #app-container #app-header h1 {
       font-size: 3rem;
+      font-weight: 500;
       text-shadow: 2px 2px 2px #222; }
   #app-container #timer-container {
     flex-basis: 50%;
@@ -37,7 +39,8 @@ body {
     #app-container #timer-container * {
       padding: 0.35rem 0; }
     #app-container #timer-container #timer-label h3 {
-      font-size: 3.3rem; }
+      font-size: 3.3rem;
+      font-weight: 400; }
     #app-container #timer-container #time-left {
       font-size: 4rem; }
   #app-container #timer-controls {
@@ -73,6 +76,7 @@ body {
         cursor: pointer; }
       #app-container #length-controls .length-control-container h3 {
         flex-basis: 100%;
-        font-size: 1.8rem; }
+        font-size: 1.8rem;
+        font-weight: 400; }
       #app-container #length-controls .length-control-container div {
         padding: 1rem; }
