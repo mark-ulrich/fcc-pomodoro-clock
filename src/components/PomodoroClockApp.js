@@ -8,6 +8,7 @@ import BreakTimeControl from './BreakTimeControl';
 /*
  *  CONSTANTS
  */
+const DEFAULT_WARNING_THRESHOLD = 1;
 const DEFAULT_SESSION_LENGTH = 25;
 const DEFAULT_BREAK_LENGTH = 5;
 const MIN_LENGTH = 1;
@@ -16,6 +17,8 @@ const MAX_LENGTH = 60;
 export class PomodoroClockApp extends Component {
   constructor(props) {
     super(props);
+
+    this.warningThreshold = DEFAULT_WARNING_THRESHOLD;
 
     this.state = {
       sessionLength: DEFAULT_SESSION_LENGTH,
@@ -143,7 +146,11 @@ export class PomodoroClockApp extends Component {
         <div id='app-header'>
           <h1>Pomodoro Clock</h1>
         </div>
-        <Timer timeRemaining={timeRemaining} isOnBreak={this.state.isOnBreak} />
+        <Timer
+          timeRemaining={timeRemaining}
+          isOnBreak={this.state.isOnBreak}
+          warningThreshold={this.warningThreshold}
+        />
         <div id='length-controls'>
           <BreakTimeControl
             breakLength={this.state.breakLength}

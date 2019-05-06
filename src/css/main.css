@@ -45,6 +45,8 @@ body {
       font-weight: 400; }
     #app-container #timer-container #time-left {
       font-size: 4rem; }
+      #app-container #timer-container #time-left.warning {
+        color: #df3a4f; }
   #app-container #timer-controls {
     margin: 1.4rem auto 0.5rem;
     text-align: center; }
