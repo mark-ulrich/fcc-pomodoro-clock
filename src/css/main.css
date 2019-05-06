@@ -23,7 +23,9 @@ body {
   #app-container h3 {
     text-align: center; }
   #app-container #app-header {
+    flex-basis: 100%;
     margin: 0 auto 1rem;
+    text-align: center;
     color: #c8c8c8; }
     #app-container #app-header h1 {
       font-size: 3rem;
@@ -80,3 +82,69 @@ body {
         font-weight: 400; }
       #app-container #length-controls .length-control-container div {
         padding: 1rem; }
+
+@media screen and (max-width: 660px) {
+  #app-container {
+    max-width: 90%; }
+    #app-container #app-header h1 {
+      font-size: 2rem; }
+    #app-container #timer-container #timer-label h3 {
+      font-size: 2rem; }
+    #app-container #timer-container #time-left {
+      font-size: 2.2rem; }
+    #app-container #timer-controls .timer-control-button {
+      font-size: 1.4rem;
+      padding: 0.5rem;
+      width: 140px;
+      margin: 0 1.2rem; }
+    #app-container #length-controls .length-control-container {
+      font-size: 1rem; }
+      #app-container #length-controls .length-control-container .control {
+        width: 50px;
+        font-size: 1.5rem;
+        text-align: center; }
+      #app-container #length-controls .length-control-container h3 {
+        font-size: 1.4rem; } }
+
+@media screen and (max-width: 440px) {
+  #app-container {
+    margin: 0.8rem auto; }
+    #app-container #app-header {
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #222; }
+      #app-container #app-header h1 {
+        font-size: 2rem; }
+    #app-container #timer-container {
+      flex-basis: 100%;
+      margin-bottom: 1rem;
+      padding: 0 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #222;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-content: space-between; }
+      #app-container #timer-container #timer-label h3 {
+        font-size: 2rem; }
+      #app-container #timer-container #time-left {
+        font-size: 2.3rem; }
+    #app-container #timer-controls {
+      flex-basis: 100%; }
+      #app-container #timer-controls .timer-control-button {
+        font-size: 1.4rem;
+        padding: 0.5rem;
+        width: 90%;
+        margin: 0.2rem 1.2rem; }
+    #app-container #length-controls {
+      flex-basis: 100%;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #222; }
+      #app-container #length-controls .length-control-container {
+        flex-basis: 20%;
+        font-size: 1rem; }
+        #app-container #length-controls .length-control-container .control {
+          width: 50px;
+          font-size: 1.5rem;
+          text-align: center; }
+        #app-container #length-controls .length-control-container h3 {
+          font-size: 1.4rem; } }

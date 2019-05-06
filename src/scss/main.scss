@@ -46,7 +46,9 @@ body {
   }
 
   #app-header {
+    flex-basis: 100%;
     margin: 0 auto 1rem;
+    text-align: center;
 
     color: $app-header-color;
 
@@ -150,3 +152,5 @@ body {
     }
   }
 }
+
+@import 'responsive';
